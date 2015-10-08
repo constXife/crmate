@@ -8,7 +8,8 @@ module Crmate
   # @force      [Bool]
   # @verbose    [Bool]
   class Settings
-    property host, port, unixsocket, wait, force, verbose
+    property host, unixsocket, wait, force, verbose
+    setter port
 
     # Initialize method
     #
@@ -16,6 +17,10 @@ module Crmate
     # @return [nil]
     def initialize(@host = "", @port = 52698, @unixsocket = "~/.rmate.socket",
       @wait = false, @force = false, @verbose = false)
+    end
+
+    def port
+      @port.to_i
     end
   end
 end

@@ -1,2 +1,2 @@
 require "spec"
-require "../src/crmate"
+require "../src/initialize"

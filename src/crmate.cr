@@ -1,5 +1,5 @@
-require "./crmate/*"
+require "./initialize"
 
-module Crmate
-  # TODO Put your code here
-end
+app = App.new
+args = (ARGV.empty?) ? ["-h"] : ARGV
+app.parse_cli(args: args)

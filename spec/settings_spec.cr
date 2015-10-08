@@ -15,7 +15,7 @@ describe Crmate::Settings do
     end
 
     it "#unixsocket" do
-      unixsocket = "/dev/socket"
+      unixsocket = "~/.test-rmate.socket"
       settings = Crmate::Settings.new(unixsocket: unixsocket)
       settings.unixsocket.should eq(unixsocket)
     end
@@ -36,20 +36,6 @@ describe Crmate::Settings do
       verbose = true
       settings = Crmate::Settings.new(verbose: verbose)
       settings.verbose.should eq(verbose)
-    end
-
-    
-
-    # it "#lines" do
-    #   @settings.lines.should eq(@settings_hash[:lines])
-    # end
-    #
-    # it "#names" do
-    #   @settings.names.should eq(@settings_hash[:names])
-    # end
-    #
-    # it "#types" do
-    #   @settings.types.should eq(@settings_hash[:types])
-    # end
+    end    
   end
 end
