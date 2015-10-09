@@ -43,7 +43,7 @@ describe Crmate::App do
 
     it "#help" do
       crmate.parse_cli(args: ["--help"])
-      pipe.to_s.lines[0].should eq("Usage: rmate [arguments]\n")
+      pipe.to_s.lines[0].should eq("Usage: crmate [arguments]\n")
       pipe.clear
     end
 

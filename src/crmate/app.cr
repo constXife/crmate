@@ -17,7 +17,7 @@ module Crmate
     # @args Array<String> arguments
     def parse_cli(args = [] of String)
       OptionParser.parse(args) do |parser|
-        parser.banner = "Usage: rmate [arguments]"
+        parser.banner = "Usage: crmate [arguments]"
         parser.on("--host=HOST", "Host") do |host|
           settings.host = host
         end
