@@ -3,7 +3,7 @@ require "./spec_helper"
 describe Crmate::App do
   describe "properly parse CLI" do
     pipe = StringIO.new
-    crmate = Crmate::App.new(pipe)
+    crmate = Crmate::App.new(io: pipe)
 
     it "#host" do
       host = "google.com"
